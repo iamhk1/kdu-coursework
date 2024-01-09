@@ -1,10 +1,10 @@
 package org.q3;
-import org.q2.SentimentAnalyzer;
+
 
 import java.util.logging.Logger;
 public class APIResponseParser {
     static Logger logger= Logger.getLogger(String.valueOf(APIResponseParser.class));
-    public static void main(String args[]){
+    public static void main(String []args){
         String response = "<work>" +
                 "<id type=\"integer\">2361393</id>" +
                 "<books_count type=\"integer\">813</books_count>" +
@@ -42,7 +42,7 @@ public class APIResponseParser {
         book.setTitle(parse(response,"title"));
         book.setPublicationYear(Integer.parseInt(parse(response,"original_publication_year")));
         book.setRatingsCount(Integer.parseInt(parse(response,"ratings_count").replaceAll(",","")));
-        String parentChild[]={"author","name"};
+        String []parentChild={"author","name"};
         String name=parse(response,parentChild);
         logger.info(name);
         return book;
@@ -54,7 +54,7 @@ public class APIResponseParser {
         int endIndex=response.indexOf(endAttribute,startIndex);
         if(startIndex==-1)
         {
-            //log
+            logger.info("Index Not found");
             return " ";
         }
         while(startIndex<response.length()&&response.charAt(startIndex)!='>')
@@ -68,17 +68,18 @@ public class APIResponseParser {
         }
         return data.toString();
     }
-    public static String parse(String response,String ParentChild[])
+    public static String parse(String response,String []parentChild)
     {
 
-        String parent=ParentChild[0];
+        String parent=parentChild[0];
         String parentEndAttribute="</"+parent+">";
-        String child=ParentChild[1];
+        String child=parentChild[1];
         int startIndexParent=response.indexOf(parent);
         int endIndexParent=response.indexOf(parentEndAttribute,startIndexParent);
         String parentString=response.substring(startIndexParent,endIndexParent);
         int startIndexChild=parentString.indexOf(child);
         if(startIndexChild==-1){
+            logger.info("Index Not found");
             return "";
         }
         while(startIndexChild<parentString.length()&&parentString.charAt(startIndexChild)!='>') {

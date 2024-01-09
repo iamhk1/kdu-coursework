@@ -1,5 +1,4 @@
 package org.q2;
-import org.q1.StudentUtil;
 
 import java.util.*;
 import java.util.logging.Logger;
