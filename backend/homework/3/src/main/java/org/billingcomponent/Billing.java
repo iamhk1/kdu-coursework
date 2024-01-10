@@ -1,4 +1,4 @@
-package org.billingComponent;
+package org.billingcomponent;
 
 import org.users.Patient;
 
@@ -8,9 +8,9 @@ public class Billing {
         double[] payments = new double[2];
 
         HealthInsurancePlan patientInsurancePlan = patient.getInsurancePlan();
-        double amountPayable=0.0;
+        double amountPayable;
         double amtPayableByInsurance=0.0;
-        double discount=0.0;
+        double discount;
 
         if(patientInsurancePlan instanceof PlatinumPlan) {
             amtPayableByInsurance = patientInsurancePlan.getCoverage() * amount;

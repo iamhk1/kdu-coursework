@@ -1,4 +1,4 @@
-package org.billingComponent;
+package org.billingcomponent;
 
 public class BronzePlan extends HealthInsurancePlan{
     public double computeMonthlyPremium(double salary)

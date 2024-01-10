@@ -1,4 +1,4 @@
-package org.billingComponent;
+package org.billingcomponent;
 
 public class BlueCrossBlueShield implements InsuranceBrand{
 
@@ -21,7 +21,6 @@ public class BlueCrossBlueShield implements InsuranceBrand{
     @Override
     public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean smoking) {
         double monthlyPremium=0;
-
         if(insurancePlan instanceof PlatinumPlan) {
             if (age > 55)
                 monthlyPremium += 200;

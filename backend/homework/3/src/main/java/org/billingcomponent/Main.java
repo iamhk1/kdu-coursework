@@ -1,4 +1,4 @@
-package org.billingComponent;
+package org.billingcomponent;
 import org.logger.Log;
 import org.users.Patient;
 import org.users.Doctor;

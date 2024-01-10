@@ -1,4 +1,4 @@
-package org.billingComponent;
+package org.billingcomponent;
 
 
 public abstract class HealthInsurancePlan {
@@ -22,7 +22,7 @@ public abstract class HealthInsurancePlan {
     {
         return coverage;
     }
-    public HealthInsurancePlan insurancePlan;
+    private HealthInsurancePlan insurancePlan;
     public void setInsurancePlan(HealthInsurancePlan insurancePlan)
     {
         this.insurancePlan=insurancePlan;

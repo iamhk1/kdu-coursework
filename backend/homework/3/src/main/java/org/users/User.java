@@ -1,6 +1,6 @@
 package org.users;
 
-import org.billingComponent.HealthInsurancePlan;
+import org.billingcomponent.HealthInsurancePlan;
 
 public class User {
     private long id;
@@ -58,7 +58,7 @@ public class User {
         return email;
     }
 
-    public HealthInsurancePlan insurancePlan;
+    private static HealthInsurancePlan insurancePlan;
     public void setInsurancePlan(HealthInsurancePlan insurancePlan)
     {
         this.insurancePlan=insurancePlan;
