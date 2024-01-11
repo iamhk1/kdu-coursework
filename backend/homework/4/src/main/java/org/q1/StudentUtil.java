@@ -3,6 +3,9 @@ package org.q1;
 import logger.Log;
 
 public class StudentUtil {
+    private StudentUtil(){
+
+    }
 
     public static double[] calculateGPA(int[] studentIdList, char[][] studentsGrades) throws MissingGradeException {
          if (studentIdList.length != studentsGrades.length) {
@@ -37,7 +40,7 @@ public class StudentUtil {
 
     public static int[] getStudentsByGPA(double lower, double higher, int[] studentIdList, char[][] studentsGrades) throws MissingGradeException, InvalidDataException {
         if (lower < 0 || higher < 0 || lower > higher) {
-            return null;
+            return new int[0];
         }
 
         double[] gpaList = new double[studentIdList.length];

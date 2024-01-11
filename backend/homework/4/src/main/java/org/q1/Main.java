@@ -8,6 +8,8 @@ public class Main {
         char[][] grades = {{'A', 'B'}, {'A', ' '}};
         try {
             int[] ans = StudentUtil.getStudentsByGPA(2.5,3.5,ids, grades);
+            for(int i:ans)
+                Log.info("Id "+i);
         }
         catch (Exception e){
             Log.info(e.getMessage());

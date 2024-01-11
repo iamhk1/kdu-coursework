@@ -2,8 +2,11 @@ package logger;
 
 
 import java.util.logging.Level;
-import java.util.logging.Logger;
 public class Log {
+    private Log()
+    {
+
+    }
     private static final java.util.logging.Logger LOGGER = java.util.logging.Logger.getLogger(Log.class.getName());
 
     public static void info(String message) {

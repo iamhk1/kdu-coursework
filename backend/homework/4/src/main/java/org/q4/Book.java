@@ -1,6 +1,10 @@
 package org.q4;
 
 public class Book implements Comparable {
+    Book()
+    {
+
+    }
     private String title;
     private String author;
     private int year;
@@ -75,16 +79,8 @@ public class Book implements Comparable {
         return true;
     }
 
-	/*public int hashCode() {
-		return title.hashCode();
-	}
-
-	public boolean equals(Object o) {
-		return (year == (((Book)o).getYear())) && (author.equals((((Book)o).getAuthor())));
-	}*/
-
     public int compareTo(Object book) {
-        return getTitle().compareTo(((Book)book).getTitle()); // utilizing String’s compareTo
+        return getTitle().compareTo(((Book)book).getTitle());
     }
 
 }
