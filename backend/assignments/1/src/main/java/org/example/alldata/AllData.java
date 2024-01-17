@@ -31,9 +31,9 @@ public class AllData {
     private static ArrayList<String[]> traderData = new ArrayList<>();
     private static ArrayList<Traders> traderObj = new ArrayList<>();
 
-    private static HashMap<String, Double> profitLoss = new HashMap<>();
+    private static  HashMap<String, Double> profitLoss = new HashMap<>();
 
-    public static Map<String, Double> getProfitLoss() {
+    public  static Map<String, Double> getProfitLoss() {
         return profitLoss;
     }
 
@@ -43,19 +43,19 @@ public class AllData {
         return topCoins;
     }
 
-    public static List<String[]> getCoinData() {
+    public  static List<String[]> getCoinData() {
         return coinData;
     }
 
-    public static List<String[]> getTraderData() {
+    public  static List<String[]> getTraderData() {
         return traderData;
     }
 
-    public static List<Coins> getCoinObj() {
+    public  static List<Coins> getCoinObj() {
         return coinObj;
     }
 
-    public static List<Traders> getTraderObj() {
+    public  static  List<Traders> getTraderObj() {
         return traderObj;
     }
 }

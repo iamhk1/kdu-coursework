@@ -5,14 +5,14 @@ import org.example.trader.Traders;
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.logging.Logger;
+import Logs.Log;
 
 public class ShowDetails {
-    static AllData ob = new AllData();
-    private static final Logger Log = Logger.getLogger(ShowDetails.class.getName());
+    static AllData AllData = new AllData();
+
 
     public static void topCoins() {
-        Map<BigDecimal, String> treeMap = ob.getTopCoins();
+        Map<BigDecimal, String> treeMap = AllData.getTopCoins();
         treeMap.entrySet().stream()
                 .limit(5)
                 .forEach(entry -> Log.info(entry.getKey() + " => " + entry.getValue()));
@@ -20,7 +20,7 @@ public class ShowDetails {
 
     public static void bottomCoins() {
         Log.info("5 Lowest Priced Coins are: ");
-        TreeMap<BigDecimal, String> treeMap = ob.getTopCoins();
+        TreeMap<BigDecimal, String> treeMap = AllData.getTopCoins();
         Log.info("5 Lowest Priced Coins are: ");
 
         treeMap.descendingMap()
@@ -31,7 +31,7 @@ public class ShowDetails {
     }
 
     public static void topFiveTrader() {
-        Map<String, Double> profitLoss = AllData.getProfitLoss();
+        Map<String, Double> profitLoss =  AllData.getProfitLoss();
         List<Map.Entry<String, Double>> topTraders = profitLoss.entrySet().stream()
                 .sorted(Map.Entry.<String, Double>comparingByValue().reversed())
                 .limit(5)
@@ -49,7 +49,7 @@ public class ShowDetails {
     }
 
     public static void showPortfolio(String walletId) {
-        List<Traders> allTraders = ob.getTraderObj();
+        List<Traders> allTraders = AllData.getTraderObj();
         Traders reqTrader = null;
         for (Traders cur : allTraders) {
             if (cur.getWalletAddress().equals(walletId)) {
@@ -69,10 +69,10 @@ public class ShowDetails {
     }
 
     public static void showPnL(String walletId) {
-        if (!ob.getProfitLoss().containsKey(walletId)) {
+        if (!AllData.getProfitLoss().containsKey(walletId)) {
             Log.info("Wrong wallet id entered");
         } else {
-            Log.info("PnL of the given user is " + ob.getProfitLoss().get(walletId));
+            Log.info("PnL of the given user is " + AllData.getProfitLoss().get(walletId));
         }
     }
 }
