@@ -62,9 +62,9 @@ public class Queries {
         List<Player> sortedList = list.stream()
                 .sorted(Comparator.comparingInt(Player::getPlayerWickets))
                 .collect(Collectors.toList());
-        for(int i=0;i<50;i++)
+        for(int i=sortedList.size()-1;i>=sortedList.size()-3;i--)
         {
-            Log.info(sortedList.get(i).getPlayerWickets()+"-wickets "+" name"+sortedList.get(i).getPlayerName());
+            Log.info(sortedList.get(i).getPlayerWickets()+"-Wickets "+" name -"+sortedList.get(i).getPlayerName());
         }
     }
     public static void findTopThreeHighestScorer()
@@ -73,7 +73,7 @@ public class Queries {
         List<Player> sortedList = list.stream()
                 .sorted(Comparator.comparingInt(Player::getPlayerRuns))
                 .collect(Collectors.toList());
-        for(int i=0;i<3;i++)
+        for(int i=sortedList.size()-1;i>=sortedList.size()-3;i--)
         {
             Log.info(sortedList.get(i).getPlayerWickets()+"-Runs "+" name -"+sortedList.get(i).getPlayerName());
         }
