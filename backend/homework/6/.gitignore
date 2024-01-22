@@ -37,7 +37,6 @@ build/
 ### Mac OS ###
 .DS_Store
 
-      ../../../.github/workflows/maven-sonar.yml
         ../../assessments/1/Assessment-1.iml
         ../../assessments/1/target/
         ../../assignments/1/Java-assess-1.iml
