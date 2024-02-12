@@ -1,0 +1,11 @@
+{
+    "HostName": "BT1000099858",
+    "OperatingSystem": "win32",
+    "Architecture": "x64",
+    "OSRelease": "10.0.22631",
+    "Uptime": 993511.14,
+    "NumberOfCPUCores": 8,
+    "TotalMemory": 16921759744,
+    "FreeMemory": 4366262272,
+    "CurrentWorkingDirectory": "C:\\Azure Notes\\Frontend\\node\\hw"
+}
