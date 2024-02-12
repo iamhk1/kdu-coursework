@@ -2,66 +2,66 @@ const http=require('http')
 const path=require('path')
 const fs=require('fs')
 const os=require('os')
-// let details={}
-// /*
-//    This function creates an object of the System Information  
-//    @returns {object} All the required details in key value pairs
-// */
-// function systemInformation()
-// {
-//     details={
-//     HostName: os.hostname(),
-//     OperatingSystem: os.platform(),
-//     Architecture: os.arch(),
-//     OSRelease: os.release(),
-//     Uptime: os.uptime(),
-//     NumberOfCPUCores: os.cpus().length,
-//     TotalMemory: os.totalmem(),
-//     FreeMemory: os.freemem(),
-//     CurrentWorkingDirectory: process.cwd()
-//     }
-//     return details;
-// }
-// systemInformation()
-// /*
-//    This function creates a path and writes content to the file at that path
-//    The value 4 is to convert the entire string in a human readable format 
-// */
-// fs.writeFile(path.join(__dirname,'json.txt'), JSON.stringify(details,null,4), (err) => {
-//     if (err) {
-//         console.log(err)
-//     }
-// })
+let details={}
+/*
+   This function creates an object of the System Information  
+   @returns {object} All the required details in key value pairs
+*/
+function systemInformation()
+{
+    details={
+    HostName: os.hostname(),
+    OperatingSystem: os.platform(),
+    Architecture: os.arch(),
+    OSRelease: os.release(),
+    Uptime: os.uptime(),
+    NumberOfCPUCores: os.cpus().length,
+    TotalMemory: os.totalmem(),
+    FreeMemory: os.freemem(),
+    CurrentWorkingDirectory: process.cwd()
+    }
+    return details;
+}
+systemInformation()
+/*
+   This function creates a path and writes content to the file at that path
+   The value 4 is to convert the entire string in a human readable format 
+*/
+fs.writeFile(path.join(__dirname,'json.txt'), JSON.stringify(details,null,4), (err) => {
+    if (err) {
+        console.log(err)
+    }
+})
 
-// const filePath=path.join(__dirname,'json.txt')
+const filePath=path.join(__dirname,'json.txt')
 
-// /*
-//    This function fetches information from .txt file and uploads it to out http server.
-//    @param {req} request URL
-//    @param {res} sending back the response
-//    @returns {string} Information about our OS 
-// */
-// const server=http.createServer((req,res)=>{
-//     if(req.url==='/'){
-//         fs.readFile(filePath,'utf8',(err,data)=>{
-//             if(err)
-//             console.log(err);
-//             else {
-//                 console.log(data);
-//                 res.writeHead(200, { 'Content-Type': 'text/html' });
-//                 res.write('<h3>Hello , my name is Harsh</h3>');
-//                 res.write('<h3>Here is my system information</h3>');
-//                 res.end(`<div style="width:60% ; background-color:#dadada"><h4>${data}</h4></div>`);
-//             }
-//         })
+/*
+   This function fetches information from .txt file and uploads it to out http server.
+   @param {req} request URL
+   @param {res} sending back the response
+   @returns {string} Information about our OS 
+*/
+const server=http.createServer((req,res)=>{
+    if(req.url==='/'){
+        fs.readFile(filePath,'utf8',(err,data)=>{
+            if(err)
+            console.log(err);
+            else {
+                console.log(data);
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.write('<h3>Hello , my name is Harsh</h3>');
+                res.write('<h3>Here is my system information</h3>');
+                res.end(`<div style="width:60% ; background-color:#dadada"><h4>${data}</h4></div>`);
+            }
+        })
         
-//     }
-// });
-// //Checks if port is present in environment variable then use that or else use 5100
-// const PORT=process.env.PORT||5100;
-// server.listen(PORT,()=>{
-//     console.log(`Server running on port ${PORT}`);
-// })
+    }
+});
+//Checks if port is present in environment variable then use that or else use 5100
+const PORT=process.env.PORT||5100;
+server.listen(PORT,()=>{
+    console.log(`Server running on port ${PORT}`);
+})
 
 /*
    This function extracts file information from the filePath string 
