@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#main {
+  height: 98%;
+  width: 98%;
+  padding: 20px 30px;
+  margin: 3px 3px;
+  border: 1px solid #000;
+}
+#main h5 {
+  font-size: 15px;
+  font-weight: 400;
+}
+#main h4 {
+  font-size: 23px;
+  font-weight: 500;
+}
+#main h1 {
+  font-weight: 300;
+  font-size: 28px;
+}
+#main h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+#nav {
+  height: 10%;
+  width: 100%;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(72, 72, 237);
+}
+
+#center {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#left {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#left-top {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#left-top #name {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 20%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+#left-top #name image {
+  height: 20px;
+  width: 20px;
+}
+#left-top #price {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#left-top #quantity {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#left-top #quantity input {
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border: none;
+}
+#left-top #buttons {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#left-top #buttons button {
+  padding: 10px 10px;
+  border: none;
+}
+#left-top #buttons #buy button {
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: rgb(181, 212, 181);
+}
+#left-top #buttons #sell button {
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: rgb(227, 165, 165);
+}
+
+#left-bottom {
+  height: 60%;
+  width: 100%;
+}
+
+#right {
+  width: 24%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+#right h1 {
+  height: 70px;
+  width: 100%;
+}
+#right #all-history {
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  gap: 5px;
+  overflow-y: scroll;
+}
+#right #all-history .newEntry {
+  margin: 10px 0px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+  border-radius: 10px;
+}/*# sourceMappingURL=styles.css.map */
