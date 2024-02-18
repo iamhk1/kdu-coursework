@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="stylesheet" href="message-styles.css">
+</head>
+<body>
+    <div id="main"> 
+        <div id="left">
+            <div class="navigation-section">
+                <div class="options full">
+                    <img src="./assets/icons/logo.svg" alt="logo">
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/home.svg" alt="home">
+                    <h4>Home</h4>
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/search.svg" alt="search">
+                    <h4>Explore</h4>
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/notification.svg" alt="notification">
+                    <h4>Notifications</h4>
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/message.svg" alt="message">
+                    <h4>Messages</h4>
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/grok.svg" alt="grok">
+                    <h4>Grok</h4>
+                </div>
+                <div class="options">
+                    <img src="./assets/icons/list.svg" alt="lists">
+                    <h4>Lists</h4>
+                </div>
+                <div class="options">
+                    <img src="./assets/icons/logo.svg" alt="premium">
+                    <h4>Premium</h4>
+                </div>
+                <div class="options">
+                    <img src="./assets/icons/person.svg" alt="profile">
+                    <h4>Profile</h4>
+                </div>
+                <div class="options full">
+                    <img src="./assets/icons/more.svg" alt="more">
+                    <h4>More</h4>
+                </div>
+                <div class="options">
+                    <img src="./assets/icons/bookmark2.svg" alt="more">
+                    <h4>Bookmarks</h4>
+                </div>
+                <div class="options">
+                    <img src="./assets/icons/communities.svg" alt="more">
+                    <h4>Communities</h4>
+                </div>
+                <div class="options mobile-view">
+                    <img src="./assets/icons/monetization.svg" alt="more">
+                    <h4>Monetization</h4>
+                </div>
+                <div class="options mobile-view">
+                    <img src="./assets/icons/settings.svg" alt="more">
+                    <h4>Settings and privacy</h4>
+                </div>
+                <div class="options mobile-view">
+                    <img src="./assets/icons/logout.svg" alt="more">
+                    <h4>Logout</h4>
+                </div>
+                <div id="post-button"class="full">
+                    <button>Post</button>
+                </div>
+                <div id="bottom-button">
+                    <div id="user-img"class="profileicon">
+                        <img id="user-photo"src="./assets/images/profile pic.png" alt="profile pic">
+                        
+                    </div>
+                    <div id="user-id">
+                        <h5 id="name">Nitesh Gupta</h5>
+                        <h5 id="user"><span>@nit_hck</span></h5>
+                        <h5 id="follower">1 <span id="margin">Following</span>&nbsp;&nbsp;0<span>Follower</span></h5>
+                    </div>
+                    <div id="options">
+                        <img id="img1"src="./assets/icons/three_dots.svg" alt="three dots">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <h2>Messages</h2>
+            <div class="each-user">
+                <img class="logo" src="./assets/images/profile pic.png" alt="">
+                <h4 id="name-display">
+                    Sagun Sangwan
+                </h4>
+                <h5 id="username" class="grey">
+                    @SagunSangwan15
+                </h5>
+            </div>
+        </div>
+        <div id="right">
+            <div id="message-box">
+                <input id="input" type="text"placeholder="Enter the message">
+                <button id="btn">Submit</button>
+            </div>
+            <div id="username-message">
+                <h4 id="username-1">Sagun Sangwan</h4>
+            </div>
+            <div class="all-messages">
+                <div class="sent-message">
+                    <p class="message-content">Hello Sagun , how's everything?</p>
+                    <p class="message-time">4:29 PM</p>
+                </div>
+                
+                <div class="received-message">
+                    <p class="message-content">How is KDU going? How is everybody performing ?</p>
+                    <p class="message-time">5:30 PM</p>   
+                </div>
+               
+                <div class="received-message">
+                    <p class="message-content">How is KDU going? How is everybody performing ?</p>
+                    <p class="message-time">5:30 PM</p>   
+                </div>
+
+                <div class="sent-message">
+                    <p class="message-content">Hello Sagun , how's everything?</p>
+                    <p class="message-time">4:29 PM</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    <script src="message.js"></script>
+</body>
+</html>

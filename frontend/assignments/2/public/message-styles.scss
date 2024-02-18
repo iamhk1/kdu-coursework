@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+@font-face {
+    font-family: regularfont;
+    src: url("./assets/fonts/Chirp-Regular.woff2");
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    font-family: regularfont;
+}
+.grey{
+    color: #5E6368;
+}
+#main{
+    height: 100%;
+    width: 100vw;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    #mobile-nav{
+        display: none;
+    }
+    
+    #left{
+        
+        height: 100%;
+        width: 25%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        .navigation-section{
+            border-right: 0.2px solid #dadada;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 4vw;
+            .options{
+                height: 6.2%;
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                gap: 1.2vw;
+                h4{
+                    font-size: 1.5vw;
+                }
+                align-items: center;
+                img{
+                    height: 23px;
+                    width: 21px;
+                }
+
+            }
+            
+            .mobile-view{
+                display: none;
+            }
+            #post-button
+            {
+                padding: 12px;
+                height: 10%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                button{
+                   
+                    padding: 1.0vw 6.5vw;
+                    border-radius: 50px;
+                    border: none;
+                    text-align: center;
+                    background-color: #1C98EA;
+                    font-size: 1.3vw;
+                }
+            }
+            #bottom-button{
+                padding: 12px;
+                padding-left: 11px;
+                margin-top: 2.3vw;
+                height: 10%;
+                width: 100%;
+                
+                position: relative;
+                display: flex;
+                gap: 1vw;
+                
+                #user-img{
+                    height: 100%;
+                    width: 19%;
+                    #img2{
+                        display: none;
+                    }
+                    
+                    position: relative;
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                #user-id{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5vw;
+                    margin-left: 0.3vw;
+                    height: 100%;
+                    width:69%;
+                    #user{
+                        font-size: 1vw;
+                    }
+                   
+                    font-size: 1.2vw;
+                    
+                        #follower{
+                            display: none;
+                        }
+                    
+                }
+                #options
+                {
+                    height: 100%;
+                    width:10% ;
+                    #img2{
+                        display: none;
+                    }
+                    img{
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+            }        
+        }
+    }
+    #center{
+        height: 100%;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        border-right: 0.5px solid #dadada;
+        h2{
+            font-size: 1.3vw;
+            padding-left: 1vw;
+            padding-top: 1vw;
+        }
+        .each-user{
+            padding: 1vw ;
+            background-color: #191E23;
+            display: flex;
+            gap: 0.7vw;
+            align-items: center;
+            h4{
+                font-size: 1.1vw;
+            }
+            h5{
+                font-size: 0.9vw;
+            }
+            img{
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+
+            }
+        }
+    }
+    #right
+    {
+        
+        display: none;
+        height: 100%;
+        width: 40%;
+        position: relative;
+        #message-box{
+            margin: 0px 2vw;
+            height: 3vw;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: #282D2D;
+            border-radius: 20px;
+            padding: 0px 3vw;
+            position: fixed;
+            bottom: 0;
+            input{
+                background-color: #282D2D;
+                padding-left: 1.5vw;
+                height: 1.5vw;
+                width:22vw;
+                outline: none;
+                border: none;
+                color:#fff;
+            }
+            button{
+                background-color: #282D2D;
+                color: #dadada;
+                border: none;
+                padding: 0.3vw 2vw;
+            }
+        }
+        #username-message{
+            padding-left: 1vw;
+            padding-top: 1vw;
+            padding-bottom: 0.5vw;
+            border-bottom: 0.5px solid #dadada;
+
+        }
+        .all-messages{
+            width: 100%;
+            max-height: 70%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            .message-time{
+                font-size: 0.9vw;
+                padding-left: 1vw;
+            }
+            .sent-message{
+               .message-content{ 
+                margin-top: 1.5vw;
+                margin-left: 1vw;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 60px;
+                padding:0.5vw;
+                background-color: #282D2D;
+                width: 60%;
+                font-size: 1.1vw;
+               }
+            }
+            .received-message{
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                margin-right: 1vw;
+                .message-content{
+                margin-top: 1.5vw;
+                
+                border-top-left-radius: 30px;
+                border-bottom-left-radius:30px;
+                border-top-right-radius: 30px;
+                padding:0.8vw;
+                background-color: #008CEB;
+                width: 60%;
+                font-size: 1.1vw;
+                }
+            }
+        }
+        .all-messages::-webkit-scrollbar{
+            width: 5px;
+            background-color: #4b4a4a;
+        }
+    }
+}
+
+@media (max-width:550px) {
+    #main{
+        .floating-tweet-box-icon{
+            display: block;
+            position: absolute;
+            bottom: 8%;
+            right: 5%;
+            border-radius: 50%;
+            background-color: #1C98EA;
+            img{
+                height: 60px;
+                width: 60px;
+                padding: 3vw;
+
+            }
+            z-index: 999;
+        }
+        #left{
+        display: none;
+        }
+        
+        #center{
+            display: block;
+            width: 100%;
+            gap: 3vw;
+            h2{
+                font-size: 4vw;
+                padding-left: 2.5vw;
+                padding-top: 2.5vw;
+            }
+            .each-user{
+                padding: 2vw ;
+                background-color: #191E23;
+                display: flex;
+                gap: 1.2vw;
+                align-items: center;
+                h4{
+                    font-size: 3vw;
+                }
+                h5{
+                    font-size: 2.5vw;
+                }
+            }
+
+        }
+        #right{
+            width: 100%;
+            position: absolute;
+            z-index: 9999;
+            background-color: #000;
+            display: none;
+            #username-message{
+                margin-top: 3vw;
+                font-size: 5vw;
+            }
+            #message-box{
+                margin: 0px 2vw;
+                height: 6vw;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                background-color: #282D2D;
+                border-radius: 20px;
+                padding: 0px 3vw;
+                position: fixed;
+                bottom: 0;
+               
+                input{
+                    background-color:#282D2D;
+                    height:10vw;
+                    width:70vw;
+                    outline: none;
+                    border: none;
+                    color: #fff;
+                    font-size: 4vw;
+                }
+                button{
+                    background-color: #282D2D;
+                    color: #dadada;
+                    border: none;
+                    padding: 4vw 4vw;
+                }
+            }
+            .all-messages{
+                width: 100%;
+                min-height: 80%;
+                overflow-y: scroll;
+                display: flex;
+                
+                flex-direction: column;
+                .message-time{
+                    font-size: 3vw;
+                    padding-left: 2vw;
+                }
+                .sent-message{
+                   .message-content{ 
+                    margin-top: 2.5vw;
+                    margin-left: 2vw;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 60px;
+                    border-bottom-right-radius: 60px;
+                    padding:1.5vw;
+                    background-color: #282D2D;
+                    width: 60%;
+                    font-size: 3.6vw;
+                   }
+                }
+                .received-message{
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    margin-right: 2vw;
+                    .message-content{
+                    margin-top: 2.5vw;
+                    
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius:30px;
+                    border-top-right-radius: 30px;
+                    padding:1.8vw;
+                    background-color: #008CEB;
+                    width: 60%;
+                    font-size: 3.6vw;
+                    }
+                }
+            }
+        }
+    }
+    
+}
