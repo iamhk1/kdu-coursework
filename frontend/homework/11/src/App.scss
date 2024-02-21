@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+  }
+  html,body
+  {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden; 
+  }
+  #root{
+    height: 100%;
+    width: 100%;
+    
+  }
+  .main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .content{
+    height: 100%;
+    width: 70%;
+    padding-top:15px ;
+    // background-color: red;
+   
+  }
+  .new-quote{
+    margin-bottom: 10px;
+    width: fit-content;
+    h3{
+        padding: 8px 8px ;
+        background-color:#FFE3CA;
+        color:  #0C359E;
+        border-radius: 5px;
+    }
+
+  }
+  .filters{
+    h5{
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    .all-filters{
+        border-bottom: 1px solid #232222;
+        padding-bottom: 5px;
+        display: flex;
+        gap: 5px;
+        p{
+            width: fit-content;
+            padding: 4px 6px;
+            border-radius: 40px;
+            background-color:#EE99C2 ;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        span{
+            margin-left: 3px;
+            color: red;
+        }
+    }
+  }
+
+  .all-quotes{
+    width: 100%;
+    .each-quote{
+        margin-top: 10px;
+        background-color: #0C359E;
+        border-radius: 20px;
+        padding: 10px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h2{
+            margin: 0 auto;
+            width: 70%;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .author{
+            
+            align-self: flex-end;
+            text-align: end;
+            padding-right: 10px;
+            p{
+                color: #fff;
+                font-size: 14px;
+            }
+            .date{
+                color: #e8e6e6;
+                font-size: 10px;
+            }
+        }
+    }
+    .filters{
+        padding: 0px 10px;
+        display: flex;
+        gap: 5px;
+        
+        p{
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 40px;
+            background-color:#EE99C2 ;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        span{
+            margin-left: 3px;
+            color: red;
+        }
+    }
+  }
