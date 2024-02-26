@@ -1,0 +1,50 @@
+
+img{
+    height: 20px;
+    width: 20px;
+}
+.each-item {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3px 10px;
+    .cross{
+      p{
+        color: red;
+      }
+    }
+  }
+  .item{
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .checkbox{
+    margin-top: 3px;
+    margin-left: 30px;
+  }
+  .each-item:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  .item-text {
+    border-bottom: none;
+  }
+  
+  .each-item:nth-child(n+2) .item-text {
+    border-top: 1px solid black;
+  }
+  #checkbox{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+  }
+    .strike-through {
+      text-decoration: line-through;
+    }
+  
