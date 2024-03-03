@@ -1,0 +1,12 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "description": "Node Basics Homework",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index",
+    "dev":"nodemon index"
+  },
+  "author": "Harsh Kachhawa",
+  "license": "ISC"
+}
