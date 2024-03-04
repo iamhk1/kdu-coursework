@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="start()">
+
+    <div id="main">
+        <div id="nav">
+            <h3>KDU Stock Market Dashboard</h3>
+        </div>
+        <div id="center">
+            <div id="left">
+                <div id="left-top">
+                <div id="name">
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWtyRxVD2RizZ3XjMx5pwDFe30tn8XTzMRVi5SFTAwA&s" alt="Z"> -->
+                    <h4 id="company-name">Apple</h4>
+                </div>
+                <div id="price">
+                    <h4>Price</h4>
+                    <h4 id="cur_price">1422</h4>
+                    <h5 id="percent">3.00%</h5>
+
+                </div>
+                <div id="quantity">
+                    <input type="text" name="quantity" id="quantity-id" placeholder="Enter the quantity">
+                </div>
+                <div id="buttons">
+                <div id="buy">
+                    <button>Buy</button>
+                </div>
+                <div id="sell">
+                    <button>Sell</button>
+                </div>
+            </div>
+            </div>
+            <div id="left-bottom">
+
+            </div>
+        </div>
+            <div id="right">
+                <div id="heading">
+                    <h1>History</h1>
+                    <div id="all-history">
+                        <div class="newEntry">
+                            <div id="newEntry-left"class="newEntry-left">
+                            <h2>100 Stocks</h2>
+                            <h4>Fri , 16th Feb </h4>
+
+                            </div>
+                            <div class="newEntry-right"class="newEntry-right">
+                                <h2>Buy</h2>
+                            </div>
+                        </div>
+                        <div class="newEntry">
+                            <div id="newEntry-left">
+                            <h2>100 Stocks</h2>
+                            <h4>Fri , 16th Feb </h4>
+                            </div>
+                            <div class="newEntry-right">
+                                <h2>Buy</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
