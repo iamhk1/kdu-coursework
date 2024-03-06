@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+@font-face {
+  font-family: regularfont;
+  src: url("./assets/fonts/Chirp-Regular.woff2");
+}
+@font-face {
+  font-family: mediumfont;
+  src: url("./assets/fonts/Chirp-Medium.woff2");
+}
+@font-face {
+  font-family: heavyfont;
+  src: url("./assets/fonts/Chirp-Heavy.woff2");
+}
+@font-face {
+  font-family: boldfont;
+  src: url("./assets/fonts/Chirp-Bold.woff2");
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: regularfont;
+}
+
+#main {
+  height: 100%;
+  width: 100vw;
+  background-color: #000;
+  position: relative;
+  display: flex;
+}
+#main #mobile-nav {
+  display: none;
+}
+#main .floating-tweet-box-icon {
+  display: none;
+}
+#main #drafts {
+  display: none;
+}
+#main #back {
+  display: none;
+}
+#main #left {
+  height: 100%;
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  border-right: 0.5px solid #dadada;
+}
+#main #left .navigation-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+}
+#main #left .navigation-section .options {
+  height: 6.2%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 1.2vw;
+  align-items: center;
+}
+#main #left .navigation-section .options h4 {
+  font-size: 1.5vw;
+}
+#main #left .navigation-section .options img {
+  height: 23px;
+  width: 21px;
+}
+#main #left .navigation-section .mobile-view {
+  display: none;
+}
+#main #left .navigation-section #post-button {
+  padding: 12px;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#main #left .navigation-section #post-button button {
+  padding: 1vw 6.5vw;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  background-color: #1C98EA;
+  font-size: 1.3vw;
+}
+#main #left .navigation-section #bottom-button {
+  padding: 12px;
+  padding-left: 11px;
+  margin-top: 2.3vw;
+  height: 10%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 1vw;
+}
+#main #left .navigation-section #bottom-button #user-img {
+  height: 100%;
+  width: 19%;
+  position: relative;
+}
+#main #left .navigation-section #bottom-button #user-img #img2 {
+  display: none;
+}
+#main #left .navigation-section #bottom-button #user-img img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#main #left .navigation-section #bottom-button #user-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  margin-left: 0.3vw;
+  height: 100%;
+  width: 69%;
+  font-size: 1.2vw;
+}
+#main #left .navigation-section #bottom-button #user-id #user {
+  font-size: 1vw;
+}
+#main #left .navigation-section #bottom-button #user-id #follower {
+  display: none;
+}
+#main #left .navigation-section #bottom-button #options {
+  height: 100%;
+  width: 10%;
+}
+#main #left .navigation-section #bottom-button #options #img2 {
+  display: none;
+}
+#main #left .navigation-section #bottom-button #options img {
+  height: 25px;
+  width: 25px;
+}
+#main span {
+  color: #dadada;
+}
+#main #right {
+  height: 100%;
+  width: 70%;
+  position: relative;
+}
+#main #right .tweet-box {
+  border-bottom: 0.5px solid #dadada;
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+#main #right .tweet-box #tweet-top {
+  height: 70%;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 2vw;
+}
+#main #right .tweet-box #tweet-top #tweet-logo {
+  margin-top: 7px;
+  height: 50%;
+  width: 5%;
+}
+#main #right .tweet-box #tweet-top #tweet-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#main #right .tweet-box #tweet-top .postinput1 {
+  height: 50%;
+  width: 60%;
+}
+#main #right .tweet-box #tweet-top .postinput1 input[type=text] {
+  width: 16vw;
+  padding: 10px;
+  border: none;
+  font-size: 1.5vw;
+  background-color: #000;
+  outline: none;
+}
+#main #right .tweet-box #tweet-bottom {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  padding-right: 2vw;
+}
+#main #right .tweet-box #tweet-bottom #tweet-bottom-left {
+  padding-left: 7vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  align-items: start;
+}
+#main #right .tweet-box #tweet-bottom #tweet-bottom-left .tweet-icon img {
+  height: 25px;
+  width: 23px;
+}
+#main #right .tweet-box #tweet-bottom .tweet-btn button {
+  padding: 8px 16px;
+  border-radius: 40px;
+  background-color: #1c98ea;
+  border: none;
+}
+#main #right .posts {
+  max-height: 65%;
+  overflow-y: scroll;
+  width: 100%;
+  position: relative;
+}
+#main #right .posts .profile-icon {
+  display: none;
+}
+#main #right .posts .each-post {
+  width: 100%;
+  border-bottom: 0.5px solid #dadada;
+  position: relative;
+}
+#main #right .posts .each-post #post-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5vw;
+  padding-right: 1vw;
+}
+#main #right .posts .each-post #post-top #icon-content {
+  width: 100%;
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 1vw;
+}
+#main #right .posts .each-post #post-top #icon-content #user-icon {
+  display: flex;
+  padding-left: 1vw;
+}
+#main #right .posts .each-post #post-top #icon-content #user-icon img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#main #right .posts .each-post #post-top #icon-content #content h5 {
+  line-height: 1.8vw;
+  font-size: 1.3vw;
+}
+#main #right .posts .each-post #post-top #dots {
+  padding-right: 2vw;
+}
+#main #right .posts .each-post #post-top #dots img {
+  height: 20px;
+  width: 20px;
+}
+#main #right .posts .each-post .post-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 7vw;
+  padding-right: 2.5vw;
+  padding-bottom: 0.5vw;
+}
+#main #right .posts .each-post .post-bottom .post-bottom-icons {
+  display: flex;
+  align-items: center;
+}
+#main #right .posts .each-post .post-bottom .post-bottom-icons img {
+  height: 25px;
+  width: 23px;
+}
+#main #right .posts .each-post .post-bottom .post-bottom-icons h5 {
+  color: #FF69B4;
+}
+#main #right .posts .each-post .post-bottom .other {
+  display: flex;
+  gap: 2vw;
+}
+#main #right .posts .each-post .post-bottom .other img {
+  height: 25px;
+  width: 23px;
+}
+#main .posts::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f1f1f1;
+}
+#main .posts::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+#main .posts::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+#login-main {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+#login-main #login-center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6vw;
+}
+#login-main #login-center #login-twitter {
+  display: flex;
+  gap: 1.2vw;
+  margin-bottom: 1.5vw;
+  display: flex;
+  align-items: center;
+}
+#login-main #login-center #login-twitter h1 {
+  font-size: 3.6vw;
+  font-weight: 500;
+}
+#login-main #login-center #login-twitter img {
+  height: 4vw;
+  width: 4vw;
+}
+#login-main #login-center input {
+  outline: none;
+  width: 22vw;
+  height: 4vw;
+  border-radius: 5px;
+  border: 1.4px solid #1C98EA;
+  padding: 5px 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6vw;
+}
+#login-main #login-center input::-moz-placeholder {
+  color: #fff !important;
+}
+#login-main #login-center input::placeholder {
+  color: #fff !important;
+}
+#login-main #login-center button {
+  padding: 0.7vw 9.4vw;
+  border-radius: 50px;
+  background-color: #1C98EA;
+  border: none;
+  font-size: 1.5vw;
+}
+
+#main #blue {
+  color: #1C98EA;
+}
+
+@media (min-width: 510px) and (max-width: 750px) {
+  #main #right .tweet-box {
+    height: 30%;
+  }
+  #main #right .tweet-box #tweet-top {
+    gap: 6vw;
+  }
+  #login-main #login-center {
+    gap: 3.5vw;
+  }
+  #login-main #login-center #login-twitter {
+    gap: 2.5vw;
+    margin-bottom: 1.5vw;
+  }
+  #login-main #login-center #login-twitter h1 {
+    font-size: 7vw;
+    font-weight: 500;
+  }
+  #login-main #login-center #login-twitter img {
+    height: 8vw;
+    width: 8vw;
+  }
+  #login-main #login-center input {
+    outline: none;
+    width: 37vw;
+    height: 9vw;
+    font-size: 3vw;
+  }
+  #login-main #login-center button {
+    padding: 2vw 15vw;
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 500px) {
+  #main #mobile-nav {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 9999;
+    padding: 0px 1vw;
+    justify-content: space-between;
+    bottom: 0;
+  }
+  #main #mobile-nav .options {
+    padding: 10px;
+    display: flex;
+    gap: 1.2vw;
+    align-items: center;
+  }
+  #main #mobile-nav .options h4 {
+    font-size: 1.5vw;
+  }
+  #main #mobile-nav .options img {
+    height: 23px;
+    width: 21px;
+  }
+  #login-main #login-center {
+    gap: 4vw;
+  }
+  #login-main #login-center #login-twitter {
+    gap: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  #login-main #login-center #login-twitter h1 {
+    font-size: 7vw;
+    font-weight: 500;
+  }
+  #login-main #login-center #login-twitter img {
+    height: 7.5vw;
+    width: 7.5vw;
+  }
+  #login-main #login-center input {
+    outline: none;
+    width: 35vw;
+    height: 8vw;
+    font-size: 3vw;
+  }
+  #login-main #login-center button {
+    padding: 2vw 15vw;
+    font-size: 3vw;
+  }
+  #main {
+    padding-top: 5vw;
+  }
+  #main .floating-tweet-box-icon {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    background-color: #1C98EA;
+    z-index: 999;
+  }
+  #main .floating-tweet-box-icon img {
+    height: 50px;
+    width: 50px;
+    padding: 3vw;
+  }
+  #main #back {
+    display: none;
+    position: absolute;
+    top: 2.1%;
+    left: 2%;
+  }
+  #main #back img {
+    height: 25px;
+    width: 25px;
+  }
+  #main #drafts {
+    display: none;
+    position: absolute;
+    left: 59%;
+    top: 3.2%;
+  }
+  #main #drafts h5 {
+    font-size: 3.9vw;
+  }
+  #main #left .navigation-section {
+    padding: 1vw 3vw;
+  }
+  #main #left .navigation-section :nth-child(9) {
+    order: 0;
+  }
+  #main #left .navigation-section :nth-child(8) {
+    order: 1;
+  }
+  #main #left .navigation-section :nth-child(7) {
+    order: 2;
+  }
+  #main #left .navigation-section :nth-child(11) {
+    order: 3;
+  }
+  #main #left .navigation-section :nth-child(12) {
+    order: 4;
+  }
+  #main #left .navigation-section :nth-child(13) {
+    order: 5;
+  }
+  #main #left .navigation-section :nth-child(14) {
+    order: 6;
+  }
+  #main #left .navigation-section :nth-child(15) {
+    order: 7;
+    border-bottom: 0.5px solid #dadada;
+  }
+  #main #left .navigation-section #post-button {
+    display: none;
+  }
+  #main #left .navigation-section .full {
+    display: none;
+  }
+  #main #left .navigation-section .mobile-view {
+    display: block;
+    display: flex;
+  }
+  #main #left .navigation-section .options {
+    gap: 3vw;
+    height: 8%;
+  }
+  #main #left .navigation-section .options h4 {
+    font-size: 5vw;
+  }
+  #main #left .navigation-section .options img {
+    height: 25px;
+    width: 25px;
+  }
+  #main #left {
+    border: none;
+    width: 70%;
+    position: absolute;
+    background-color: rgb(6, 6, 6);
+    z-index: 100;
+    display: none;
+  }
+  #main #left .navigation-section #bottom-button {
+    width: 0;
+    gap: 3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    margin-bottom: 11vw;
+  }
+  #main #left .navigation-section #bottom-button #user-img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #main #left .navigation-section #bottom-button #user-img #img2 {
+    display: block;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #dadada;
+    border-radius: 50%;
+  }
+  #main #left .navigation-section #bottom-button #user-id h5 {
+    font-size: 4.4vw;
+    width: 100%;
+  }
+  #main #left .navigation-section #bottom-button #user-id #user {
+    font-size: 3.3vw;
+  }
+  #main #left .navigation-section #bottom-button #user-id #follower {
+    margin-top: 2vw;
+    font-size: 3.3vw;
+    display: flex;
+  }
+  #main #left .navigation-section #bottom-button #user-id #follower span #margin {
+    margin-right: 1px;
+  }
+  #main #left .navigation-section #bottom-button #options #img1 {
+    display: none;
+  }
+  #main #right {
+    width: 100%;
+    height: 100%;
+  }
+  #main #right .tweet-box {
+    display: none;
+    height: 30%;
+  }
+  #main #right .tweet-box #tweet-top {
+    gap: 7vw;
+    height: 80%;
+  }
+  #main #right .tweet-box #tweet-top .postinput1 input[type=text] {
+    width: 50vw;
+    padding: 10px;
+    border: none;
+    font-size: 3.9vw;
+    background-color: #000;
+    outline: none;
+  }
+  #main #right .tweet-box #tweet-bottom .tweet-btn {
+    position: absolute;
+    top: 1%;
+    right: 8%;
+  }
+  #main #right .tweet-box #tweet-bottom .tweet-btn button {
+    padding: 1.7vw 5vw;
+    font-size: 3.5vw;
+  }
+  #main #right .posts {
+    max-height: 50%;
+    width: 100%;
+    overflow-y: scroll;
+    margin-top: 4vw;
+    position: relative;
+  }
+  #main #right .posts .profile-icon {
+    display: block;
+    width: 100%;
+    height: 10%;
+    z-index: 999;
+  }
+  #main #right .posts .profile-icon img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 1.1vw;
+  }
+  #main #right .posts .each-post {
+    border-bottom: 0.5px solid #dadada;
+    position: relative;
+  }
+  #main #right .posts .each-post #post-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5vw;
+    padding-right: 1vw;
+  }
+  #main #right .posts .each-post #post-top #icon-content {
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 1vw;
+  }
+  #main #right .posts .each-post #post-top #icon-content #user-icon {
+    display: flex;
+    padding-left: 1vw;
+  }
+  #main #right .posts .each-post #post-top #icon-content #user-icon img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  #main #right .posts .each-post #post-top #icon-content #content h5 {
+    width: 100%;
+    line-height: 5.4vw;
+    font-size: 3.9vw;
+  }
+  #main #right .posts .each-post .post-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12vw;
+    padding-right: 6vw;
+    padding-bottom: 0.5vw;
+  }
+  #main #right .posts .each-post .post-bottom .post-bottom-icons {
+    height: 25px;
+    width: 23px;
+  }
+  #main #right .posts .each-post .post-bottom .other {
+    height: 25px;
+    width: 23px;
+    display: flex;
+    gap: 1vw;
+    margin-right: 2vw;
+  }
+  #main #right .posts::-webkit-scrollbar {
+    width: 8px;
+  }
+  #main #right .posts::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  #main #right .posts::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}/*# sourceMappingURL=styles.css.map */
