@@ -1,0 +1,28 @@
+
+img{
+    height: 20px;
+    width: 20px;
+}
+.each-item {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3px 10px;
+  }
+  
+  .each-item:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  .item-text {
+    border-bottom: none;
+  }
+  
+  .each-item:nth-child(n+2) .item-text {
+    border-top: 1px solid black;
+  }
+  
