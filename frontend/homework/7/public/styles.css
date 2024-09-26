@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #330000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#center {
+  position: relative;
+  height: 70%;
+  width: 70%;
+  background-color: #D09683;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#center h1 {
+  padding-left: 25vw;
+  height: 10%;
+  border-bottom: 2px solid #2c2c2c;
+}
+#center #content {
+  height: 90%;
+  width: 100%;
+  background-color: #73605B;
+  position: relative;
+}
+#center #content #rooms {
+  display: none;
+}
+#center #content #messages {
+  max-height: 90%;
+  overflow-y: scroll;
+  width: 100%;
+}
+#center #content #messages::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+  background-color: #fff;
+}
+#center #content #form {
+  background-color: #f1cdc1;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+#center #content #form input {
+  width: 90%;
+  height: 100%;
+  outline: none;
+  background-color: #f1cdc1;
+  border: 1px solid #dadada;
+  border-bottom-left-radius: 10px;
+  color: #494949;
+  padding-left: 1vw;
+}
+#center #content #form button {
+  padding: 10px 29px;
+  border: none;
+  position: absolute;
+  right: 0;
+  font-size: 1.1vw;
+  font-weight: 700;
+  background-color: #D09683;
+  transition: all ease 1s;
+}
+#center #content #form button:hover {
+  background-color: #e38160;
+  color: #330000;
+}
+
+.message {
+  display: flex;
+  width: 80%;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.message__symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1.5px solid black;
+}
+
+.message__text {
+  margin-left: 20px;
+  font-size: 1.4vw;
+}/*# sourceMappingURL=styles.css.map */
