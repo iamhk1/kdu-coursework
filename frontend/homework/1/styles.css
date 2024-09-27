@@ -1,0 +1,546 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+}
+/* #selector */
+#main{
+    position: relative;
+}
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+#page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+}
+#nav{
+    height: 40px;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    color:#000;
+    top:5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 190px;
+}
+#nav #g1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#nav #g2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#nav h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+#nav h2{
+    text-transform: lowercase;
+    font-size: 45px;
+    font-weight: 500;
+}
+#center{
+    width: 100%;
+    height: 400px;
+    /* background-color: #000; */
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 120px;
+    gap: 20px;
+    
+}
+#center h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+#center h1{
+    margin-left: -10px;
+    font-size: 80px;
+    font-weight: 500;
+}
+#center h3{
+    width: 80%;
+    font-size: 32px;
+    font-weight:300;
+    line-height: 60px;
+}
+#page2
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+#page2 #left{
+    position: relative;
+    top: 7%;
+    left: 10%;
+    height: 100%;
+    width: 60%;
+    /* background-color: green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap:30px;
+    
+}
+#page2 #right{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    top:5%;
+    gap: 10px;
+    right: 6%;
+    
+}
+#page2 #right h1{
+     color:#26266D;
+     font-size: 70px;
+}
+#page2 #right p{
+    color:#8c8c9c;
+    font-size: 16px;
+  
+    
+}
+#page2 #right #p1{
+    margin-bottom: 20px;
+}
+#left h3{
+    color:#130739;
+   
+    font-size: 40px;
+    font-weight: 400;
+}
+/* .selector */
+#left .lcontent{
+    color:#8c8c9c;
+    width: 70%;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+#left span{
+    color: #666666;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #000; */
+    display: flex;
+    position: relative;
+    
+    /* background: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1689096641561-3YLLHX97ODN32UR7RSQR/hero-parallelograms.png?format=2500w); */
+}
+#page3 img{
+    height: 100vh;
+    width: 100%;
+}
+#page3 #left{
+    height: 100%;
+    width: 35%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    
+
+}
+#page3 #right{
+    height: 100%;
+    width: 65%;
+    /* background-color: aqua; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left:35%;
+    
+    
+}
+/* tagselector */
+#page3 #right h2{
+    position: relative;
+    width: 70%;
+    left: 20%;
+    top: 5%;
+    margin-top: -100px;
+    font-size: 35px;
+    font-weight: 500;
+}
+#page3 #left img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+   margin-bottom: 20px;
+    border: none;
+    /* position: absolute;
+    top: 40%;
+    left: 20%; */
+}
+#page3 #left h3{
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    margin-left: 0px;
+}
+#page3 #left h3 span{
+    font-weight: 400;
+    color: #fff;
+}
+#page4{
+    height: 130vh;
+    width: 100%;
+    background-color: #130739;
+    position: relative;
+}
+#page4 #top{
+    height: 40%;
+    width: 100%;
+    /* background-color: green; */
+    position: relative;
+    padding-top: 20px;
+    padding-left: 80px;
+    
+}
+#page4 #top h1{
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+#page4 #top h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+#page4 #bottom{
+    height: 60%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    /* justify-content: space-around; */
+}
+#page4 #bottom .in{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 75%;
+    padding: 20px 60px;
+    gap: 20px;
+}
+#page4 #bottom #other{
+    
+    width: 85%;
+}
+#page4 #bottom .in h1{
+    font-size: 30px;
+}
+#page4 button{
+    padding: 20px 60px;
+    border:1px solid red;
+    color: red;
+    background-color:  #130739;
+    margin-left: -40px;
+
+}
+
+
+#page4 #other button{
+    margin-top: 0px;
+}
+#page4 #bottom h3{
+    color: #c1bbbb;
+    font-weight: 400;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1689096641561-3YLLHX97ODN32UR7RSQR/hero-parallelograms.png?format=2500w);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#page5 h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#page5 .all-lists{
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+    /* background-color: red; */
+
+}
+#page5 .all-lists .lists
+{
+    position: relative;
+
+}
+#page5 .all-lists #official-link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#page5 .all-lists #official-link a{
+    text-decoration: none;
+    margin-top: 5px;
+}
+/* child selector */
+#page5 .lists #principal-list >li{
+    margin: 5px;
+}
+#page5 .all-lists .ordered-lists{
+    position: relative;
+    
+} 
+#page5 .all-lists .ordered-lists li{
+    margin: 5px 30px;
+}
+#page5 #rest{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+#page5 #rest #center{
+    height: 50%;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: row;
+}
+/* padding */
+/* width */
+#page5 #rest #form{
+   
+    height: 100%;
+    width: 60%;
+    position: relative;
+    padding-left: 20px;
+
+}
+
+#page5 #rest #form .form-group{
+    margin-bottom: 10px;
+}
+/* border */
+#page5 #rest #form button{
+    background-color: #26266D;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    transition: all ease 1s;
+}
+#page5 #rest #form .form-group{
+    margin-top: 10px;
+}
+
+#page5 #rest  #india-team h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#india-team {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+#india-team h1 {
+    
+    text-align: center;
+}
+
+#india-team table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#india-team th, #india-team td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#page5 .btn{
+    background-color: #666666;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+}
+footer{
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1689096641561-3YLLHX97ODN32UR7RSQR/hero-parallelograms.png?format=2500w);
+    
+    overflow: hidden;
+}
+/* descendent selector */
+footer #center{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #bold{
+    font-size: 25px;
+}
+footer pre{
+    margin: 10px 0px;
+}
+footer #sup{
+    font-size: 20px;
+}
+footer sub{
+    font-size: 22px;
+}
+footer h4{
+    margin-bottom: 10px;
+}
+
+#page6{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/587fc3e546c3c40b37363b71/1689096641561-3YLLHX97ODN32UR7RSQR/hero-parallelograms.png?format=2500w);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#page6 #container{
+    height: 20%;
+    width: 100%;
+    /* background-color: green; */
+    position: relative;
+
+}
+
+#page6 #container .box{
+    height: 60%;
+    /* width: 30%; */
+    padding-left: 20px;
+    display: inline-block;
+    
+}
+#page6 #container .box img{
+    height: 100%;
+
+}
+#page6 #container #box-heading{
+     height: 50%;
+    width: 50%; 
+    margin-left: 200px;
+    text-align: center;
+ /* background-color: #000;  */
+  
+}
+#page6 #container h1{
+    margin: 0;
+    /* background-color: orange; */
+}
+#page6 #center{
+    height: 50%;
+    width: 100%;
+    /* background-color: gold; */
+    position: relative;
+}
+/* box-model */
+#page6 #center #relative-container{
+    margin: 0;
+    height: 50%;
+    width: 20%;
+    border: 2px solid orange;
+    padding:30px 20px;
+    background-color: purple;
+    position: relative;
+}
+#page6 #center #absolute-container{
+    height: 30%;
+    width: 20%;
+    background-color: lightblue;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+#page6 #center #absolute-container p{
+    height: 30px;
+    text-align: center;
+    padding-top:40px ;
+}
+/* adjacent sibling selector */
+#page6 #center #selectors p+h5{
+    color: red;
+}
+/* general sibling selector */
+#page6 #center #selectors2 p~h5{
+    color: green;
+}
+/* pseudo class  selector */
+#page5 #rest #form button:hover{
+    background-color: red;
+    color: #000;
+}
+/* pseudo element selector */
+
+#page6 #center #selectors2 p::first-letter{
+    color: aqua;
+}
+/* child selector */
+#page6 #center #selectors3>p{
+    color:aqua
+}
